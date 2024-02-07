@@ -1,0 +1,62 @@
+ JQuery
+
+1  What is jQuery?
+
+jQuery is a JavaScript library designed to simplify HTML DOM tree traversal and manipulation, as well as event handling, CSS animations, and Ajax. It is free, open-source software using the permissive MIT License. As of August 2022, jQuery is used by 77% of the 10 million most popular websites.
+jQuery is a fast, small, and feature-rich JavaScript library. It makes things like HTML document traversal and manipulation, event handling, animation, and Ajax much simpler with an easy-to-use API that works across a multitude of browsers.
+jQuery is called with and represented by the dollar sign ($)
+Here are some of the things that jQuery can do:
+Select HTML elements
+Traverse the DOM
+Manipulate HTML elements
+Handle events
+Create animations
+Make Ajax requests
+jQuery is a popular choice for web developers because it makes it easy to add interactivity and functionality to web pages. It is also a good choice for beginners because it is relatively easy to learn.
+
+2 How to Apply CSS Using JQuery, How to Add Class and Remove Class in
+Jquery, JQuery Animation?
+
+Here are some ways to apply CSS using jQuery:
+Using the css() method: The css() method allows you to set or get the CSS properties of an element. To set a CSS property, you pass the property name and value to the css() method. For example, the following code sets the background-color property of the element with the ID myElement to red:
+
+3 Event bubbling tickling example
+
+<html>
+<head>
+<style>
+.ancestors * { 
+  display: block;
+  border: 2px solid lightgrey;
+  color: lightgrey;
+  padding: 5px;
+  margin: 15px;
+}
+</style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  $("span").parent().css({"color": "red", "border": "2px solid red"});
+});
+</script>
+</head>
+<body>
+
+<div class="ancestors">
+  <div style="width:500px;">div (great-grandparent)
+    <ul>ul (grandparent)  
+      <li>li (direct parent)
+        <span>span</span>
+      </li>
+    </ul>   
+  </div>
+
+  <div style="width:500px;">div (grandparent)   
+    <p>p (direct parent)
+      <span>span</span>
+    </p> 
+  </div>
+</div>
+
+</body>
+</html>
